@@ -29,6 +29,6 @@ app.get("*", function(req, res){
 	res.status = 404;
 	res.send("page not found");
 });
-app.listen(process.argv[2], function(){
+app.listen(process.env.PORT || 3000, function(){
 	console.log("waiting for requests");
 });
